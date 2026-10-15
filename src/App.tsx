@@ -101,5 +101,40 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           className="flex flex-col items-center gap-4"
-// TerraPulse Module slice 3/21
+        >
+          <Leaf className="w-16 h-16 text-[#2ecc71] animate-pulse" />
+          <h1 className="text-2xl font-bold text-gradient tracking-tighter">TERRAPULSE AI</h1>
+          <p className="text-xs text-white/40 tracking-[0.2em] font-light">RESTORING EARTH'S VITALITY</p>
+        </motion.div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex h-screen bg-[#050a06] text-white overflow-hidden font-sans">
+      {/* Sidebar Navigation */}
+      <nav className="w-20 lg:w-64 border-r border-white/5 bg-black/20 flex flex-col items-center lg:items-start p-4 lg:p-6 gap-8 z-50">
+        <div className="flex items-center gap-3 mb-4 self-center lg:self-start">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2ecc71] to-[#27ae60] flex items-center justify-center shadow-lg shadow-[#2ecc71]/20">
+            <Leaf className="w-6 h-6 text-white" />
+          </div>
+          <span className="hidden lg:block font-bold text-xl tracking-tighter">TerraPulse <span className="text-[#2ecc71]">AI</span></span>
+        </div>
+
+        <div className="flex flex-col w-full gap-2">
+          <NavButton icon={<BarChart3 />} label="Dashboard" active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')} />
+          <NavButton icon={<Cpu />} label="Edge AI Neural" active={activeTab === 'edge'} onClick={() => setActiveTab('edge')} />
+          <NavButton icon={<FlaskConical />} label="Microbial Lab" active={activeTab === 'biolab'} onClick={() => setActiveTab('biolab')} />
+          <NavButton icon={<CheckCircle2 />} label="Validation Lab" active={activeTab === 'validation'} onClick={() => setActiveTab('validation')} />
+          <NavButton icon={<Globe />} label="Carbon Credits" active={activeTab === 'carbon'} onClick={() => setActiveTab('carbon')} />
+          <NavButton icon={<Settings />} label="Settings" active={activeTab === 'settings'} onClick={() => setActiveTab('settings')} />
+        </div>
+
+        <div className="mt-auto w-full p-4 glass-green rounded-2xl hidden lg:block">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-2 h-2 rounded-full bg-[#2ecc71] animate-pulse" />
+            <span className="text-[10px] text-white/60 font-medium uppercase tracking-widest">Edge System Live</span>
+          </div>
+          <p className="text-[10px] text-white/40 leading-relaxed uppercase">Connected to 124 Soil Nodes</p>
+// TerraPulse Module slice 4/21
 export default function App() { return <div>Module Active</div>; }
