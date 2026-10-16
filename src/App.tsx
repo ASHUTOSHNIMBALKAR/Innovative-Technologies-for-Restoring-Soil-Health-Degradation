@@ -136,5 +136,40 @@ export default function App() {
             <span className="text-[10px] text-white/60 font-medium uppercase tracking-widest">Edge System Live</span>
           </div>
           <p className="text-[10px] text-white/40 leading-relaxed uppercase">Connected to 124 Soil Nodes</p>
-// TerraPulse Module slice 4/21
+        </div>
+      </nav>
+
+      {/* Main Content Area */}
+      <main className="flex-1 overflow-y-auto relative h-full">
+        {/* Header */}
+        <header className="sticky top-0 z-40 w-full px-8 py-6 flex items-center justify-between glass-green border-b border-white/5 backdrop-blur-md">
+          <div className="flex items-center gap-4">
+            <h2 className="text-xl font-semibold capitalize tracking-tight">{activeTab}</h2>
+            <div className="flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10">
+              <Sprout className="w-4 h-4 text-[#2ecc71]" />
+              <span className="text-xs font-medium text-white/60">Farm: Pune_Alpha_01</span>
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-6">
+             <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-2xl border border-white/10 glass-green">
+              <span className="text-[10px] text-white/40 uppercase tracking-widest font-bold">Scenario:</span>
+              <select 
+                value={currentScenario}
+                onChange={(e) => setCurrentScenario(e.target.value)}
+                className="bg-transparent text-xs font-bold text-[#2ecc71] outline-none cursor-pointer"
+              >
+                {SCENARIOS.map(s => <option key={s.id} value={s.id} className="bg-[#050a06]">{s.name}</option>)}
+              </select>
+            </div>
+            <div className="flex flex-col items-end">
+              <span className="text-[10px] text-white/40 uppercase tracking-widest">Soil Health Index</span>
+              <span className="text-lg font-bold text-[#2ecc71]">{currentScenario === 'normal' ? '84.2%' : currentScenario === 'drought' ? '42.1%' : '65.8%'} <TrendingUp className="inline w-4 h-4 ml-1" /></span>
+            </div>
+          </div>
+        </header>
+
+        <AnimatePresence mode="wait">
+          <motion.div 
+// TerraPulse Module slice 5/21
 export default function App() { return <div>Module Active</div>; }
