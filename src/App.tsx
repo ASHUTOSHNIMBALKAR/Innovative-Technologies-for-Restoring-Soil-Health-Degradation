@@ -205,5 +205,40 @@ function NavButton({ icon, label, active, onClick }: { icon: React.ReactNode, la
       )}>
         {icon}
       </div>
-// TerraPulse Module slice 6/21
+      <span className={cn(
+        "hidden lg:block text-sm font-medium",
+        active ? "text-white" : "text-white/40 group-hover:text-white"
+      )}>
+        {label}
+      </span>
+    </button>
+  );
+}
+
+function DashboardView({ scenario }: { scenario: string }) {
+  const isDrought = scenario === 'drought';
+  const isSalinity = scenario === 'salinity';
+  const isNutrient = scenario === 'nutrient';
+  
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      {/* Top Stats */}
+      <div className="lg:col-span-8 flex flex-col gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <StatCard 
+            icon={<Droplets className={cn(isDrought || isNutrient ? "text-red-400" : "text-blue-400")} />} 
+            label="Soil Moisture" 
+            value={isDrought ? "12.4%" : isNutrient ? "22.1%" : "38.5%"} 
+            trend={isDrought ? "-14.2%" : "+2.4%"} 
+            trendUp={!isDrought} 
+          />
+          <StatCard 
+            icon={<Thermometer className={cn(isDrought ? "text-red-500" : "text-orange-400")} />} 
+            label="Soil Temp" 
+            value={isDrought ? "38.2°C" : "24.2°C"} 
+            trend="+1.2%" 
+            trendUp={true} 
+          />
+          <StatCard 
+// TerraPulse Module slice 7/21
 export default function App() { return <div>Module Active</div>; }
