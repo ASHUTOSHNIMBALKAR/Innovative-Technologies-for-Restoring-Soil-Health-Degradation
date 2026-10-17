@@ -171,5 +171,39 @@ export default function App() {
 
         <AnimatePresence mode="wait">
           <motion.div 
-// TerraPulse Module slice 5/21
+            key={activeTab}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="p-8"
+          >
+            {activeTab === 'dashboard' && <DashboardView scenario={currentScenario} />}
+            {activeTab === 'edge' && <EdgeView />}
+            {activeTab === 'biolab' && <BioLabView />}
+            {activeTab === 'validation' && <ValidationView />}
+            {activeTab === 'carbon' && <CarbonView />}
+          </motion.div>
+        </AnimatePresence>
+      </main>
+    </div>
+  );
+}
+
+function NavButton({ icon, label, active, onClick }: { icon: React.ReactNode, label: string, active: boolean, onClick: () => void }) {
+  return (
+    <button 
+      onClick={onClick}
+      className={cn(
+        "flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 group",
+        active ? "bg-[#2ecc71] shadow-lg shadow-[#2ecc71]/20" : "hover:bg-white/5"
+      )}
+    >
+      <div className={cn(
+        "w-6 h-6 flex items-center justify-center group-hover:scale-110 transition-transform",
+        active ? "text-white" : "text-white/40"
+      )}>
+        {icon}
+      </div>
+// TerraPulse Module slice 6/21
 export default function App() { return <div>Module Active</div>; }
