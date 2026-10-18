@@ -274,5 +274,40 @@ function DashboardView({ scenario }: { scenario: string }) {
             <h3 className="text-lg font-bold">Soil Carbon Sequestration Trend</h3>
             <div className="flex items-center gap-4 text-xs font-medium text-white/40 uppercase tracking-widest">
               <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-[#2ecc71]" /> Carbon (t/ha)</span>
-// TerraPulse Module slice 8/21
+              <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-blue-500" /> Moisture</span>
+            </div>
+          </div>
+          <div className="h-[250px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={SENSOR_HISTORY}>
+                <defs>
+                  <linearGradient id="colorCarbon" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#2ecc71" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="#2ecc71" stopOpacity={0}/>
+                  </linearGradient>
+                </defs>
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
+                <XAxis dataKey="time" stroke="rgba(255,255,255,0.3)" fontSize={10} axisLine={false} tickLine={false} />
+                <YAxis stroke="rgba(255,255,255,0.3)" fontSize={10} axisLine={false} tickLine={false} />
+                <Tooltip 
+                  contentStyle={{ background: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}
+                  itemStyle={{ color: '#fff' }}
+                />
+                <Area type="monotone" dataKey="carbon" stroke="#2ecc71" fillOpacity={1} fill="url(#colorCarbon)" strokeWidth={2} />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Column (Advise & Status) */}
+      <div className="lg:col-span-4 flex flex-col gap-8">
+        {/* Regenerative Pilot */}
+        <div className="glass-green p-6 rounded-3xl border border-[#2ecc71]/20">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-[#2ecc71]/20 flex items-center justify-center">
+              <Zap className="w-6 h-6 text-[#2ecc71]" />
+            </div>
+            <div>
+// TerraPulse Module slice 9/21
 export default function App() { return <div>Module Active</div>; }
