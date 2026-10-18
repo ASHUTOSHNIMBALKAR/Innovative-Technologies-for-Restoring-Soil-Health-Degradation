@@ -240,5 +240,39 @@ function DashboardView({ scenario }: { scenario: string }) {
             trendUp={true} 
           />
           <StatCard 
-// TerraPulse Module slice 7/21
+            icon={<Activity className={cn(isSalinity ? "text-blue-400" : isNutrient ? "text-red-400" : "text-emerald-400")} />} 
+            label={isNutrient ? "Nutrient Bio-Layer" : "Elec. Conductivity"} 
+            value={isSalinity ? "4.2 dS/m" : isNutrient ? "Extremely Low" : "0.8 dS/m"} 
+            trend={isSalinity ? "+240%" : isNutrient ? "-80%" : "optimal"} 
+            trendUp={isSalinity} 
+          />
+        </div>
+
+        {/* Digital Twin Visualization Placeholder */}
+        <div className="relative h-[400px] rounded-3xl overflow-hidden glass border border-white/5">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 p-8 flex flex-col justify-end">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-bold">Soil Digital Twin <span className="text-[#2ecc71] text-xs font-normal border border-[#2ecc71]/30 px-2 py-0.5 rounded-full ml-2">Live Rendering</span></h3>
+                <p className="text-sm text-white/40">Multi-point holographic mapping of NPK levels</p>
+              </div>
+              <button className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl transition-colors text-sm font-medium flex items-center gap-2">
+                <Navigation className="w-4 h-4" /> Expand Map
+              </button>
+            </div>
+          </div>
+          <img 
+            src="/src/assets/map_twin.png" 
+            alt="Soil Digital Twin" 
+            className="w-full h-full object-cover opacity-60 scale-105 hover:scale-110 transition-transform duration-700" 
+          />
+        </div>
+
+        {/* Real-time Telemetry Chart */}
+        <div className="glass p-8 rounded-3xl border border-white/5">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-lg font-bold">Soil Carbon Sequestration Trend</h3>
+            <div className="flex items-center gap-4 text-xs font-medium text-white/40 uppercase tracking-widest">
+              <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-[#2ecc71]" /> Carbon (t/ha)</span>
+// TerraPulse Module slice 8/21
 export default function App() { return <div>Module Active</div>; }
