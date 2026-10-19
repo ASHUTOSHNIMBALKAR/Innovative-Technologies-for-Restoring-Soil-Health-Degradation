@@ -344,5 +344,39 @@ function DashboardView({ scenario }: { scenario: string }) {
           <h3 className="font-bold mb-6 flex items-center gap-2">
             <Microscope className="w-5 h-5 text-[#2ecc71]" />
             Soil Biodiversity
-// TerraPulse Module slice 10/21
+          </h3>
+          <div className="space-y-6">
+            {MICROBIAL_DATA.map((microbe) => (
+              <div key={microbe.name}>
+                <div className="flex justify-between text-xs mb-2">
+                  <span className="text-white/60">{microbe.name}</span>
+                  <span className={cn(
+                    "font-bold",
+                    microbe.level > 80 ? "text-[#2ecc71]" : microbe.level > 50 ? "text-yellow-400" : "text-red-400"
+                  )}>{microbe.level}%</span>
+                </div>
+                <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                  <motion.div 
+                    initial={{ width: 0 }}
+                    animate={{ width: `${microbe.level}%` }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className={cn(
+                      "h-full rounded-full",
+                      microbe.level > 80 ? "bg-[#2ecc71]" : microbe.level > 50 ? "bg-yellow-400" : "bg-red-400"
+                    )}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function EdgeView() {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+// TerraPulse Module slice 11/21
 export default function App() { return <div>Module Active</div>; }
