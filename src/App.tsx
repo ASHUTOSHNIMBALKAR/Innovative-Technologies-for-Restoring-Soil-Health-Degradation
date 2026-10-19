@@ -309,5 +309,40 @@ function DashboardView({ scenario }: { scenario: string }) {
               <Zap className="w-6 h-6 text-[#2ecc71]" />
             </div>
             <div>
-// TerraPulse Module slice 9/21
+              <h3 className="font-bold">Regenerative Pilot</h3>
+              <p className="text-[10px] text-white/40 uppercase tracking-widest">AI Advisory Engine</p>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            {REGENERATIVE_TASKS.map((task) => (
+              <div key={task.id} className="p-4 bg-black/40 rounded-2xl border border-white/5 hover:border-[#2ecc71]/30 transition-colors group cursor-pointer">
+                <div className="flex justify-between items-start mb-2">
+                  <span className={cn(
+                    "px-2 py-0.5 rounded text-[8px] font-bold uppercase",
+                    task.priority === 'High' ? "bg-red-500/20 text-red-400" : "bg-blue-500/20 text-blue-400"
+                  )}>
+                    {task.priority} Priority
+                  </span>
+                  <span className="text-[10px] text-[#2ecc71] font-bold">{task.impact}</span>
+                </div>
+                <p className="text-sm font-medium mb-3 group-hover:text-[#2ecc71] transition-colors">{task.task}</p>
+                <div className="flex justify-end">
+                  <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-[#2ecc71] transition-colors" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button className="w-full mt-6 py-4 bg-[#2ecc71] rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#27ae60] transition-colors shadow-lg shadow-[#2ecc71]/20">
+             Execute Restoration Plan
+          </button>
+        </div>
+
+        {/* Microbial Health Indicator */}
+        <div className="glass p-6 rounded-3xl border border-white/5">
+          <h3 className="font-bold mb-6 flex items-center gap-2">
+            <Microscope className="w-5 h-5 text-[#2ecc71]" />
+            Soil Biodiversity
+// TerraPulse Module slice 10/21
 export default function App() { return <div>Module Active</div>; }
