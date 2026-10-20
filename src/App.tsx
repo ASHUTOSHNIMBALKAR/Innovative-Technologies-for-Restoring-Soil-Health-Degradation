@@ -378,5 +378,40 @@ function DashboardView({ scenario }: { scenario: string }) {
 function EdgeView() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-// TerraPulse Module slice 11/21
+      <div className="space-y-8">
+        <div className="glass p-8 rounded-3xl border border-white/5">
+          <h3 className="text-xl font-bold mb-2">EdgeMind Architecture</h3>
+          <p className="text-sm text-white/40 mb-8">Integrated Sensing & On-Device AI Diagnostic</p>
+          
+          <img src="/src/assets/edge_sense.png" alt="Edge Hardware" className="w-full h-auto rounded-2xl border border-white/10 mb-8" />
+          
+          <div className="grid grid-cols-2 gap-4">
+            <div className="p-4 bg-white/5 rounded-2xl">
+              <h4 className="text-[10px] text-white/40 uppercase tracking-widest mb-1">Processor</h4>
+              <p className="text-sm font-bold">Jetson Nano Edge</p>
+            </div>
+            <div className="p-4 bg-white/5 rounded-2xl">
+              <h4 className="text-[10px] text-white/40 uppercase tracking-widest mb-1">Connectivity</h4>
+              <p className="text-sm font-bold">LoRaWAN / 5G Ready</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-8">
+        <div className="glass-green p-8 rounded-3xl border border-[#2ecc71]/20">
+          <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+            <Activity className="text-[#2ecc71]" /> 
+            Live Node Telemetry
+          </h3>
+          <div className="space-y-4">
+            <TelemetryCard label="Nitrogen (N)" value="42 mg/kg" status="Optimal" color="text-green-400" />
+            <TelemetryCard label="Phosphorus (P)" value="18 mg/kg" status="Low" color="text-yellow-400" />
+            <TelemetryCard label="Potassium (K)" value="215 mg/kg" status="Optimal" color="text-green-400" />
+            <TelemetryCard label="Soil Organic Carbon" value="2.8%" status="Increasing" color="text-emerald-400" />
+            <TelemetryCard label="Electrical Conductivity" value="0.8 dS/m" status="Stable" color="text-blue-400" />
+          </div>
+        </div>
+
+// TerraPulse Module slice 12/21
 export default function App() { return <div>Module Active</div>; }
