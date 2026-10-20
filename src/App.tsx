@@ -413,5 +413,40 @@ function EdgeView() {
           </div>
         </div>
 
-// TerraPulse Module slice 12/21
+        <div className="glass p-8 rounded-3xl border border-white/5">
+          <h3 className="text-lg font-bold mb-4">Autonomous Diagnostic</h3>
+          <div className="flex items-start gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
+            <div className="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center shrink-0">
+              <AlertTriangle className="text-yellow-400" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold mb-1">Nitrogen Deficiency Detected</h4>
+              <p className="text-xs text-white/40 leading-relaxed">System identified early-stage chlorosis in Sector B-12. Bio-adjustment recommended within 48 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BioLabView() {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="lg:col-span-12 glass p-8 rounded-3xl border border-white/5 flex items-center justify-between">
+        <div>
+          <h3 className="text-2xl font-bold text-gradient">Bio-Pulse Diagnostic Lab</h3>
+          <p className="text-white/40">Analyzing microbial rhizosphere interactions in real-time</p>
+        </div>
+        <div className="flex gap-4">
+          <button className="px-6 py-3 glass-green rounded-xl text-sm font-bold border border-[#2ecc71]/30">Run Full Bio-Scan</button>
+          <button className="px-6 py-3 bg-[#2ecc71] rounded-xl text-sm font-bold shadow-lg shadow-[#2ecc71]/20">Order Custom Blend</button>
+        </div>
+      </div>
+
+      <div className="lg:col-span-8 space-y-8">
+        <div className="glass p-8 rounded-3xl border border-white/5">
+          <h3 className="text-lg font-bold mb-8">Microbial Population Dynamics</h3>
+          <div className="h-[300px]">
+// TerraPulse Module slice 13/21
 export default function App() { return <div>Module Active</div>; }
