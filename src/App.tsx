@@ -482,5 +482,40 @@ function BioLabView() {
         </div>
       </div>
     </div>
-// TerraPulse Module slice 14/21
+  );
+}
+
+function StatCard({ icon, label, value, trend, trendUp }: { icon: React.ReactNode, label: string, value: string, trend: string, trendUp: boolean }) {
+  return (
+    <div className="glass p-6 rounded-3xl border border-white/5 hover:border-white/10 transition-all duration-300 group">
+      <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        {icon}
+      </div>
+      <p className="text-xs text-white/40 uppercase tracking-widest mb-1 font-medium">{label}</p>
+      <div className="flex items-end justify-between">
+        <h4 className="text-2xl font-bold">{value}</h4>
+        <span className={cn(
+          "text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1",
+          trendUp ? "bg-green-500/10 text-green-400" : "bg-red-500/10 text-red-400"
+        )}>
+          {trendUp ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
+          {trend}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function TelemetryCard({ label, value, status, color }: { label: string, value: string, status: string, color: string }) {
+  return (
+    <div className="flex items-center justify-between p-4 bg-white/5 rounded-2xl border border-white/5">
+      <div>
+        <h4 className="text-[10px] text-white/40 uppercase tracking-widest mb-0.5">{label}</h4>
+        <p className="text-sm font-bold">{value}</p>
+      </div>
+      <div className="text-right">
+        <span className={cn("text-[10px] font-bold uppercase tracking-widest", color)}>{status}</span>
+      </div>
+    </div>
+// TerraPulse Module slice 15/21
 export default function App() { return <div>Module Active</div>; }
