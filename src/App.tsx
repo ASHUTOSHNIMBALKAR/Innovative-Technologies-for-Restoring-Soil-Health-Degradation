@@ -448,5 +448,39 @@ function BioLabView() {
         <div className="glass p-8 rounded-3xl border border-white/5">
           <h3 className="text-lg font-bold mb-8">Microbial Population Dynamics</h3>
           <div className="h-[300px]">
-// TerraPulse Module slice 13/21
+             <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={SENSOR_HISTORY}>
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
+                <XAxis dataKey="time" stroke="rgba(255,255,255,0.3)" fontSize={10} axisLine={false} tickLine={false} />
+                <YAxis stroke="rgba(255,255,255,0.3)" fontSize={10} axisLine={false} tickLine={false} />
+                <Tooltip 
+                   contentStyle={{ background: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}
+                />
+                <Line type="monotone" dataKey="npk" stroke="#2ecc71" strokeWidth={3} dot={false} />
+                <Line type="monotone" dataKey="ph" stroke="#f39c12" strokeWidth={3} dot={false} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:col-span-4 space-y-8">
+        <div className="glass p-6 rounded-3xl border border-white/5">
+          <h3 className="font-bold mb-6">Actionable Bio-Insights</h3>
+          <div className="space-y-4">
+            <BioInsightCard 
+              title="Increase Mycorrhizal Colonization" 
+              desc="Root connectivity is at 45%. Introducing native spores will improve phosphorus uptake by 22%."
+              type="bio"
+            />
+             <BioInsightCard 
+              title="Salinity Buffering" 
+              desc="EC levels rising. Bio-stimulant Alpha-12 recommended to enhance osmotic tolerance."
+              type="chemical"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+// TerraPulse Module slice 14/21
 export default function App() { return <div>Module Active</div>; }
