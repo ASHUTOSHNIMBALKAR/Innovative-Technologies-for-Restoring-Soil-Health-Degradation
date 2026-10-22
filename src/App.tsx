@@ -517,5 +517,39 @@ function TelemetryCard({ label, value, status, color }: { label: string, value: 
         <span className={cn("text-[10px] font-bold uppercase tracking-widest", color)}>{status}</span>
       </div>
     </div>
-// TerraPulse Module slice 15/21
+  );
+}
+
+function BioInsightCard({ title, desc, type }: { title: string, desc: string, type: 'bio' | 'chemical' }) {
+  return (
+    <div className="p-4 bg-white/5 rounded-2xl border border-white/10 hover:border-[#2ecc71]/30 transition-colors">
+      <div className="flex items-center gap-2 mb-2">
+         {type === 'bio' ? <Sprout className="w-4 h-4 text-[#2ecc71]" /> : <FlaskConical className="w-4 h-4 text-orange-400" />}
+         <h4 className="text-xs font-bold leading-tight">{title}</h4>
+      </div>
+      <p className="text-[10px] text-white/40 leading-relaxed">{desc}</p>
+    </div>
+  );
+}
+
+function CarbonView() {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+       <div className="lg:col-span-12 glass-green p-8 rounded-3xl border border-[#2ecc71]/20 flex items-center justify-between overflow-hidden relative">
+        <div className="relative z-10">
+          <h3 className="text-2xl font-bold text-gradient-green flex items-center gap-2">
+            <Globe className="w-8 h-8" /> Carbon Credit Ledger
+          </h3>
+          <p className="text-white/40 max-w-md mt-2">Verified Soil Organic Carbon (SOC) sequestration tracked via block-hash verification for the Voluntary Carbon Market.</p>
+        </div>
+        <div className="text-right relative z-10">
+          <p className="text-[10px] text-white/40 uppercase tracking-widest font-bold mb-1">Total Carbon Sequestered</p>
+          <h4 className="text-4xl font-bold text-[#2ecc71]">124.5 <span className="text-lg">tCO2e</span></h4>
+        </div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#2ecc71]/10 rounded-full blur-3xl -mr-32 -mt-32" />
+      </div>
+
+      <div className="lg:col-span-8 space-y-8">
+        <div className="glass p-8 rounded-3xl border border-white/5">
+// TerraPulse Module slice 16/21
 export default function App() { return <div>Module Active</div>; }
