@@ -621,5 +621,39 @@ function ValidationView() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <StatCard 
           icon={<ShieldCheck className="text-[#2ecc71]" />} 
-// TerraPulse Module slice 18/21
+          label="Overall Accuracy" 
+          value="96.2%" 
+          trend="+1.2%" 
+          trendUp={true} 
+        />
+        <StatCard 
+          icon={<Activity className="text-blue-400" />} 
+          label="R-Squared Correlation" 
+          value="0.984" 
+          trend="high" 
+          trendUp={true} 
+        />
+        <StatCard 
+          icon={<Zap className="text-yellow-400" />} 
+          label="Inference Latency" 
+          value="420ms" 
+          trend="-20ms" 
+          trendUp={false} 
+        />
+      </div>
+
+      <div className="glass p-8 rounded-3xl border border-white/5 overflow-hidden">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h3 className="text-2xl font-bold">Lab Correlation Report</h3>
+            <p className="text-white/40">Field Data (TerraPulse AI) vs Standard Laboratory Analysis (Wet Chemistry)</p>
+          </div>
+          <div className="flex gap-2">
+            <div className="px-3 py-1 bg-[#2ecc71]/10 text-[#2ecc71] rounded-full text-[10px] font-bold uppercase tracking-widest border border-[#2ecc71]/20">Verified 100%</div>
+            <div className="px-3 py-1 bg-white/5 text-white/40 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/10">Ref: Pune Lab #214</div>
+          </div>
+        </div>
+
+        <div className="overflow-x-auto">
+// TerraPulse Module slice 19/21
 export default function App() { return <div>Module Active</div>; }
