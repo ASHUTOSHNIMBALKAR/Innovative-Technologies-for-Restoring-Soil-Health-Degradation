@@ -586,5 +586,40 @@ function CarbonView() {
           </div>
           <div className="glass p-6 rounded-3xl border border-white/5">
              <TrendingUp className="w-8 h-8 text-blue-400 mb-4" />
-// TerraPulse Module slice 17/21
+            <h4 className="font-bold mb-2">Projected Revenue</h4>
+            <p className="text-xs text-white/40">Estimated annual payout: $2,840 based on current market rates ($32/ton).</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:col-span-4 glass-green p-6 rounded-3xl border border-[#2ecc71]/20">
+        <h3 className="font-bold mb-6 flex items-center gap-2">
+          <Database className="w-5 h-5" /> Audit Trail
+        </h3>
+        <div className="space-y-4">
+          {[1,2,3,4].map(i => (
+            <div key={i} className="p-4 bg-black/40 rounded-2xl border border-white/5 flex items-center justify-between">
+              <div>
+                <p className="text-xs font-bold">Audit_Log_0x4f{i}</p>
+                <p className="text-[10px] text-white/40">Verified by Edge_Orin_Alpha</p>
+              </div>
+              <CheckCircle2 className="w-4 h-4 text-[#2ecc71]" />
+            </div>
+          ))}
+        </div>
+        <button className="w-full mt-8 py-4 bg-[#2ecc71] rounded-2xl font-bold hover:bg-[#27ae60] transition-colors shadow-lg shadow-[#2ecc71]/20 shimmer">
+          Generate Verification Report
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function ValidationView() {
+  return (
+    <div className="flex flex-col gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <StatCard 
+          icon={<ShieldCheck className="text-[#2ecc71]" />} 
+// TerraPulse Module slice 18/21
 export default function App() { return <div>Module Active</div>; }
