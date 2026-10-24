@@ -690,5 +690,37 @@ function ValidationView() {
        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="glass p-8 rounded-3xl border border-white/5 relative overflow-hidden">
           <h3 className="text-lg font-bold mb-6">Error Distribution Analysis</h3>
-// TerraPulse Module slice 20/21
-export default function App() { return <div>Module Active</div>; }
+          <p className="text-xs text-white/40 leading-relaxed mb-6">
+            The majority of variance (deviation &lt; 3%) is found in High-Nitrogen samples, likely due to active microbial uptake during field sampling vs lab arrival. 
+          </p>
+          <div className="w-full h-24 bg-white/5 rounded-2xl flex items-end p-4 gap-2">
+            <div className="w-full bg-[#2ecc71]/40 h-[20%] rounded-t-lg" />
+            <div className="w-full bg-[#2ecc71]/60 h-[40%] rounded-t-lg" />
+            <div className="w-full bg-[#2ecc71]/80 h-[90%] rounded-t-lg" />
+            <div className="w-full bg-[#2ecc71]/60 h-[50%] rounded-t-lg" />
+            <div className="w-full bg-[#2ecc71]/30 h-[30%] rounded-t-lg" />
+          </div>
+           <p className="text-[10px] text-center mt-4 text-white/20 uppercase tracking-widest font-bold">Mean Deviation: 2.15%</p>
+        </div>
+
+        <div className="glass-green p-8 rounded-3xl border border-[#2ecc71]/20">
+          <div className="flex items-center gap-4 mb-6">
+             <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center">
+                <Leaf className="text-[#2ecc71]" />
+             </div>
+             <div>
+                <h4 className="font-bold italic">"Ready for Ecosystem scale"</h4>
+                <p className="text-[10px] text-white/40 uppercase tracking-widest">Technician Note #042</p>
+             </div>
+          </div>
+          <p className="text-sm text-white/60 leading-relaxed">
+            The TerraPulse AI has achieved TRL-7 (Technology Readiness Level) certification. Comparative analysis shows that our optical sensing coupled with Edge-ML provides lab-grade results without the logistics overhead.
+          </p>
+          <button className="mt-8 px-6 py-3 bg-[#2ecc71] rounded-xl text-xs font-bold text-black hover:scale-105 active:scale-95 transition-all w-full lg:w-auto">
+            Download PDF Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
