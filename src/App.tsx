@@ -655,5 +655,40 @@ function ValidationView() {
         </div>
 
         <div className="overflow-x-auto">
-// TerraPulse Module slice 19/21
+          <table className="w-full text-left">
+            <thead>
+              <tr className="border-b border-white/5">
+                <th className="py-4 text-[10px] uppercase tracking-widest text-white/40 font-bold">Sample ID</th>
+                <th className="py-4 text-[10px] uppercase tracking-widest text-white/40 font-bold">Parameter</th>
+                <th className="py-4 text-[10px] uppercase tracking-widest text-white/40 font-bold">Lab Standard</th>
+                <th className="py-4 text-[10px] uppercase tracking-widest text-white/40 font-bold">TerraPulse AI</th>
+                <th className="py-4 text-[10px] uppercase tracking-widest text-white/40 font-bold">Deviation</th>
+              </tr>
+            </thead>
+            <tbody>
+              {VALIDATION_DATA.map((sample, idx) => (
+                <tr key={idx} className="border-b border-white/5 hover:bg-white/5 transition-colors group">
+                  <td className="py-4 font-bold text-sm text-[#2ecc71]">{sample.id}</td>
+                  <td className="py-4 text-sm font-medium text-white/80">{sample.param}</td>
+                  <td className="py-4 text-sm text-white/60">{sample.lab}</td>
+                  <td className="py-4 text-sm font-bold text-white group-hover:text-[#2ecc71] transition-colors">{sample.ai}</td>
+                  <td className="py-4">
+                    <span className={cn(
+                      "px-2 py-1 rounded text-[10px] font-bold",
+                      sample.dev.startsWith('+') ? "text-yellow-400 bg-yellow-400/10" : "text-green-400 bg-green-400/10"
+                    )}>
+                      {sample.dev}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="glass p-8 rounded-3xl border border-white/5 relative overflow-hidden">
+          <h3 className="text-lg font-bold mb-6">Error Distribution Analysis</h3>
+// TerraPulse Module slice 20/21
 export default function App() { return <div>Module Active</div>; }
