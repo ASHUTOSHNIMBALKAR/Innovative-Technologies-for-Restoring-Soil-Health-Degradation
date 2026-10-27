@@ -247,3 +247,83 @@ Our AI predictions were cross-validated against **NABL-certified laboratory resu
 - Git
 
 ### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/ASHUTOSHNIMBALKAR/Innovative-Technologies-for-Restoring-Soil-Health-Degradation.git
+
+# 2. Navigate to project directory
+cd Innovative-Technologies-for-Restoring-Soil-Health-Degradation
+
+# 3. Install dependencies
+npm install
+
+# 4. Start development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## 📁 Project Structure
+
+```
+Innovative-Technologies-for-Restoring-Soil-Health-Degradation/
+├── README.md                          # This file
+├── index.html                         # HTML entry point
+├── package.json                       # Dependencies & scripts
+├── vite.config.ts                     # Vite configuration
+├── tsconfig.json                      # TypeScript config
+├── eslint.config.js                   # ESLint rules
+    ├── index.css                      # Global styles
+    └── assets/                        # Diagrams, illustrations, and icons
+```
+
+---
+
+## 🌾 Agri-Science Behind TerraPulse
+
+### Why Organic Carbon Matters
+Organic Carbon (OC) is the **foundation of soil life**. At < 0.50%, soil:
+- Loses 60% of its water retention capacity
+- Microbial populations crash, cutting natural nutrient cycling
+- Becomes structurally fragile, increasing erosion risk
+
+### The Alkalinity–Micronutrient Lockup Mechanism
+At pH > 7.5, essential micronutrients (Zn, Fe, Mn, B) form **insoluble compounds** that plant roots cannot absorb — even when applied as fertilizer. TerraPulse detects this invisible trap and prescribes foliar sprays as a bypass solution.
+
+### Regenerative Approach: Green Manuring with Dhaincha
+*Sesbania aculeata* (Dhaincha) is a fast-growing legume used as a green manure crop:
+- Fixes up to **80 kg/ha of atmospheric Nitrogen** in 45 days
+- Adds 15–20 tonnes of fresh biomass per hectare when incorporated
+- Raises OC by 0.15–0.25% per season with no chemical cost
+
+### Bio-Stimulant Inoculation Protocol
+- **Mycorrhizal inoculation:** Extends root surface area by up to 700%, unlocking P from locked soil zones
+- **Azotobacter:** Free-living N2 fixer, produces growth hormones (IAA, GA)
+- **Rhizobium:** Symbiotic N-fixer in legume root nodules — essential for pulse crop rotations
+
+---
+
+## 🛣️ Roadmap
+
+### Phase 1 — MVP (Initial Release) ✅
+- [x] Real-time sensor dashboard (simulated IoT)
+- [x] AI diagnostic engine
+- [x] Prescriptive recommendation system
+- [x] Microbial health monitor
+- [x] Scenario simulation engine
+- [x] NABL lab validation module
+
+### Phase 2 — Field Deployment (Q1 2027)
+- [ ] Hardware integration with actual IoT soil sensors (ESP32 + NPK sensors)
+- [ ] SMS/WhatsApp alert system for farmers in regional languages (Marathi, Hindi)
+- [ ] Offline-capable Progressive
