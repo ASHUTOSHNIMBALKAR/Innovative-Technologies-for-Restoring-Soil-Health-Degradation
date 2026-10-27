@@ -31,7 +31,6 @@
 - [📁 Project Structure](#-project-structure)
 - [🌾 Agri-Science Behind TerraPulse](#-agri-science-behind-terrapulse)
 - [🛣️ Roadmap](#️-roadmap)
-- [👥 Team](#-team)
 - [📄 License](#-license)
 
 ---
@@ -339,17 +338,6 @@ At pH > 7.5, essential micronutrients (Zn, Fe, Mn, B) form **insoluble compounds
 - [ ] Pan-India soil degradation heatmap
 - [ ] Predictive climate-soil interaction modelling
 - [ ] Integration with PM-KISAN and eNAM government platforms
-
----
-
-## 👥 Team
-
-| Name | Role |
-|------|------|
-| **Ashutosh Nimbalkar** | Lead Developer & Soil Data Analyst |
-
-**Mentored by:** Pune Agricultural Soil Testing Laboratory (PASTL)  
-**Data Partner:** ICAR — Indian Council of Agricultural Research  
 
 ---
 
