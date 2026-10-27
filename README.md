@@ -326,4 +326,35 @@ At pH > 7.5, essential micronutrients (Zn, Fe, Mn, B) form **insoluble compounds
 ### Phase 2 — Field Deployment (Q1 2027)
 - [ ] Hardware integration with actual IoT soil sensors (ESP32 + NPK sensors)
 - [ ] SMS/WhatsApp alert system for farmers in regional languages (Marathi, Hindi)
-- [ ] Offline-capable Progressive
+- [ ] Offline-capable Progressive Web App (PWA) for rural areas with low connectivity
+- [ ] Government Soil Health Card (SHC) data API integration
+
+### Phase 3 — Scale (Q3 2027)
+- [ ] Satellite imagery integration (NDVI, soil moisture indices via ISRO RISAT data)
+- [ ] Multi-farm portfolio management for FPOs (Farmer Producer Organisations)
+- [ ] Carbon credit tracking for regenerative farming practices
+- [ ] Agri-lending integration — AI credit scoring based on soil health trajectory
+
+### Phase 4 — National Platform (2028)
+- [ ] Pan-India soil degradation heatmap
+- [ ] Predictive climate-soil interaction modelling
+- [ ] Integration with PM-KISAN and eNAM government platforms
+
+---
+
+## 👥 Team
+
+| Name | Role |
+|------|------|
+| **Ashutosh Nimbalkar** | Lead Developer & Soil Data Analyst |
+
+**Mentored by:** Pune Agricultural Soil Testing Laboratory (PASTL)  
+**Data Partner:** ICAR — Indian Council of Agricultural Research  
+
+---
+
+## 🔬 Soil Testing & Field Validation
+
+- **Focus:** Precision AI/ML + IoT for Soil Health Restoration
+- **Category:** AI/ML + IoT for Agriculture
+- **Lab Report Reference:** PASTL/
