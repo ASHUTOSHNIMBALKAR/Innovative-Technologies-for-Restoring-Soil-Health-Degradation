@@ -357,4 +357,33 @@ At pH > 7.5, essential micronutrients (Zn, Fe, Mn, B) form **insoluble compounds
 
 - **Focus:** Precision AI/ML + IoT for Soil Health Restoration
 - **Category:** AI/ML + IoT for Agriculture
-- **Lab Report Reference:** PASTL/
+- **Lab Report Reference:** PASTL/2026/SL-0842 (NABL-CHEM-2026-94821)
+- **Field Trial Location:** Haveli, Pune District, Maharashtra
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+MIT License © 2026 Ashutosh Nimbalkar
+
+---
+
+## 🙏 Acknowledgements
+
+- **Government of Maharashtra**, Department of Agriculture — for Soil Health Card data
+- **ICAR (Indian Council of Agricultural Research)** — for standard soil testing reference ranges
+- **NABL** — for lab accreditation framework
+- **Dr. S. R. Deshmukh**, Chief Soil Chemist, Pune Agricultural Soil Laboratory — for expert validation
+- All the farmers of **Haveli, Pune** who shared their land and data for this research
+
+---
+
+<div align="center">
+
+**🌱 Built with love for India's Farmers 🌱**
+
+*"Heal the Soil. Feed the Nation."*
+
+</div>
